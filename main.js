@@ -31,38 +31,77 @@ const absoluteValues = function(arr){
   return result;
 }
 
-// //4..in a littler bit
-
+// 4
 const upperCaseFirstLetters = function(arr){
-  const result = [];
+  let result = [];
+  let toLower = []
+  //changing to lower case
   for ( let i = 0; i < arr.length; i++){
-    let allLowerCase = arr[i].toLowerCase();
-    // console.log(allLowerCase);
-    for(let i = 1; i<allLowerCase.length; i++){
-      let result =allLowerCase[0].toUpperCase();
-      result += allLowerCase[i]
-      // console.log(result)
-    }
-
- 
-}return result;
+    toLower.push(arr[i].toLowerCase())
+  }
+  //changing the first char to upper case
+  for ( let i = 0; i < toLower.length; i++){
+    result.push(toLower[i][0].toUpperCase()+toLower[i].slice(1,toLower[i].length))
+  }
+  
+  return result;
 }
 
-upperCaseFirstLetters(['my','park'])
-
 //5
-// const changeToInitials = function(arr){
-//   let result = [];
-//   for ( let i = 0; i < arr.length; i++){
-    
-//   }
+const changeToInitials = function(name){
+  let initialList = [];
+  
+  for ( let i = 0; i < name.length; i++){
+    let newName = name[i]
+    let initials = '';
+    for ( let i = 0; i < newName.length; i++){
+      if ( i === 0 || newName[i-1] === ' '){
+        initials += newName[i].toUpperCase()
+        initials;
+      }
+    // initialList.push(initials);
+    }
+    initialList.push(initials);
+  }
+    initialList;
+    return initialList;
+  }
+  
 
-//   return result;
-// }
+//6
+const doubleOdd = function(arr){
+let result = [];
+let test =Math.floor(23.5)
+test;
+for ( let i = 0; i < arr.length; i++){
+  if (Math.floor(arr[i]) %2 !== 0 ){
+    result.push(arr[i] * 2)
+  } else {
+    result.push(arr[i])
+  }
+}
 
-// changeToInitials(['conlin jafa','prem sherp'])
+return result;
+}
 
 
+//7
+const add1ToLeft = function(arr){
+  let result = [];
+  for ( let i = 0; i < arr.length; i++){
+    if ( arr[i] >= 0){
+      result.push(Number('1' + arr[i]))
+    } else {
+      nonNegative = Math.abs(arr[i])
+      nonNegative;
+      result.push(Number('-1'+ nonNegative))
+    }
+  }
+
+  return result;
+}
+
+console.log(add1ToLeft([1,2,3,-4,0,101]))
 /*******************************************
 * CODE DOWN HERE IS FOR INTERNAL USE ONLY. *
 *           PLEASE DON'T TOUCH!            *
